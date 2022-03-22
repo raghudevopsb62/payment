@@ -1,5 +1,6 @@
 @Library('roboshop') _
 env.COMPONENT="payment"
 env.TYPE="python"
-mainCI()
+//mutable_mainCI()
+immutable_mainCI()
 
