@@ -2,5 +2,6 @@
 env.COMPONENT="payment"
 env.TYPE="python"
 //mutable_mainCI()
-immutable_mainCI()
+//immutable_mainCI()
+docker_mainCI()
 
