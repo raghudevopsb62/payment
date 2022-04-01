@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment
+  labels:
+    component: payment
+    project: roboshop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: payment
+      project: roboshop
+  template:
+    metadata:
+      labels:
+        component: payment
+        project: roboshop
+    spec:
+      containers:
+      - name: payment
+        image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/payment:TAG
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment
+  labels:
+    component: payment
+    project: roboshop
+spec:
+  selector:
+    component: payment
+    project: roboshop
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
