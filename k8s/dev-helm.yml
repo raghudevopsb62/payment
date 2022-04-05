@@ -10,7 +10,7 @@ configMap:
     CART_HOST: cart
     CART_PORT: "80"
     USER_HOST: "user"
-    USER_PORT: 80
+    USER_PORT: "80"
     AMQP_HOST: rabbitmq
     AMQP_USER: roboshop
     AMQP_PASS: roboshop123
