@@ -1,5 +1,7 @@
 componentName: payment
 image:
   component: payment
-
+health:
+  path: /health
+  port: 8080
 
